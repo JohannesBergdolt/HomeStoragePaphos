@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  Farben als RGB-Werte (ohne Komma), damit Tailwind auch Transparenz kann.
+  Markenfarben:
+    Anthrazit      #2B2D31  -> 43 45 49
+    Petrol         #1F7A7A  -> 31 122 122
+    Helles Petrol  #E6EEEE  -> 230 238 238
+    Off-White      #F7F7F5  -> 247 247 245
+*/
+@layer base {
+  :root {
+    --anthracite: 43 45 49;
+    --petrol: 31 122 122;
+    --petrol-dark: 22 94 94; /* #165E5E – Hover-Zustand für Buttons */
+    --petrol-light: 230 238 238;
+    --offwhite: 247 247 245;
+
+    --background: var(--offwhite);
+    --foreground: var(--anthracite);
+    --border: 214 221 221; /* #D6DDDD */
+    --ring: var(--petrol);
+
+    --primary: var(--petrol);
+    --primary-foreground: 255 255 255;
+    --secondary: var(--petrol-light);
+    --secondary-foreground: var(--anthracite);
+    --muted: var(--petrol-light);
+    --muted-foreground: 88 92 99; /* #585C63 – gut lesbar auf hellem Grund */
+    --accent: var(--petrol-light);
+    --accent-foreground: var(--anthracite);
+    --card: 255 255 255;
+    --card-foreground: var(--anthracite);
+
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  /* Abstand, damit Überschriften beim Springen nicht unter der Kopfzeile landen */
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
