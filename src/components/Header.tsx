@@ -30,7 +30,7 @@ export function Header({ lang, page }: HeaderProps) {
         {text.header.skipLink}
       </a>
 
-      <div className="container flex h-16 items-center justify-between gap-4 lg:h-20">
+      <div className="container flex h-16 items-center justify-between gap-2 sm:gap-4 lg:h-20">
         <a href={paths.home[lang]} aria-label={text.header.homeLinkLabel} className="rounded-md">
           <Logo />
         </a>
@@ -50,7 +50,7 @@ export function Header({ lang, page }: HeaderProps) {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-1 sm:gap-2">
           <a
             href={switchHref}
             hrefLang={switchLang}

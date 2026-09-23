@@ -28,10 +28,11 @@ export function LogoMark({ className }: { className?: string }) {
 /** Vollständiges Logo: Bildzeichen mit Wortmarke „Home Storage / PAPHOS“. */
 export function Logo({ className }: { className?: string }) {
   return (
-    <span className={cn("inline-flex items-center gap-2.5", className)}>
-      <LogoMark className="h-9 w-auto shrink-0" />
-      <span className="flex flex-col leading-none">
-        <span className="text-lg font-semibold tracking-tight text-anthracite">{brand.wordmark}</span>
+    <span className={cn("inline-flex items-center gap-2 sm:gap-2.5", className)}>
+      <LogoMark className="h-8 w-auto shrink-0 sm:h-9" />
+      {/* whitespace-nowrap: „Home Storage“ bleibt auch auf schmalen Handys in einer Zeile */}
+      <span className="flex flex-col whitespace-nowrap leading-none">
+        <span className="text-base font-semibold tracking-tight text-anthracite sm:text-lg">{brand.wordmark}</span>
         <span className="mt-1 text-[0.65rem] font-semibold tracking-[0.3em] text-petrol">{brand.subline}</span>
       </span>
     </span>
