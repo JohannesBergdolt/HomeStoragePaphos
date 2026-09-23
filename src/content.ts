@@ -30,9 +30,8 @@ export const isTodo = (value: string) => value.startsWith("TODO");
 
 export const site = {
   name: "Home Storage Paphos",
-  // Finale Domain ohne "/" am Ende, z. B. "https://www.homestoragepaphos.com".
-  // Solange hier TODO steht, werden Canonical-, hreflang- und OG-URLs weggelassen.
-  url: "TODO: finale Domain",
+  // Domain ohne "/" am Ende. Daraus entstehen Canonical-, hreflang- und OG-URLs.
+  url: "https://homestoragepaphos.com",
   // Bild für Social Media (1200 × 630 px), abgelegt im Ordner public/
   ogImage: "TODO: Open-Graph-Bild, z. B. /og-image.jpg",
 };
@@ -99,6 +98,7 @@ export const boxes = [
 export const externalLinks = {
   googlePrivacy: "https://policies.google.com/privacy",
   whatsappPrivacy: "https://www.whatsapp.com/legal/privacy-policy-eea",
+  cloudflarePrivacy: "https://www.cloudflare.com/privacypolicy/",
   dataProtectionCommissioner: "https://www.dataprotection.gov.cy",
 };
 
@@ -366,10 +366,11 @@ const de = {
       {
         heading: "3. Hosting und Server-Logfiles",
         paragraphs: [
-          "Unsere Website wird gehostet bei: TODO: Hosting-Anbieter mit Anschrift (wird später festgelegt).",
+          "Unsere Website wird gehostet bei Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA (Cloudflare Pages). Cloudflare liefert die Seiten über ein weltweites Servernetz aus. Dabei können Daten in die USA übertragen werden; Cloudflare ist nach dem EU-US Data Privacy Framework zertifiziert.",
           "Beim Aufruf der Website speichert der Server automatisch Informationen, die dein Browser übermittelt (Server-Logfiles): IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, Referrer-URL, Browsertyp und Betriebssystem.",
           "Diese Daten sind technisch nötig, um die Website sicher und stabil auszuliefern. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse). Die Logfiles werden nach TODO: Speicherdauer Tagen gelöscht.",
         ],
+        link: { label: "Datenschutzerklärung von Cloudflare", href: externalLinks.cloudflarePrivacy },
       },
       {
         heading: "4. Kontakt per Telefon oder E-Mail",
@@ -685,10 +686,11 @@ const en: typeof de = {
       {
         heading: "3. Hosting and server log files",
         paragraphs: [
-          "Our website is hosted by: TODO: hosting provider and address (to be decided).",
+          "Our website is hosted by Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA (Cloudflare Pages). Cloudflare delivers the pages through a global server network. Data may be transferred to the USA in the process; Cloudflare is certified under the EU-US Data Privacy Framework.",
           "When you visit the website, the server automatically stores information sent by your browser (server log files): IP address, date and time of access, page requested, referrer URL, browser type and operating system.",
           "This data is technically necessary to deliver the website securely and reliably. The legal basis is Art. 6(1)(f) GDPR (legitimate interest). Log files are deleted after TODO: retention period days.",
         ],
+        link: { label: "Cloudflare privacy policy", href: externalLinks.cloudflarePrivacy },
       },
       {
         heading: "4. Contact by phone or email",

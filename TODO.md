@@ -29,7 +29,7 @@ Alle Werte werden in `src/content.ts` gepflegt. Erledigte Punkte abhaken.
 - [ ] Director(s)
 
 ## Datenschutz
-- [ ] Hosting-Anbieter festlegen und in der Datenschutzerklärung eintragen
+- [x] Hosting-Anbieter festlegen und in der Datenschutzerklärung eintragen (Cloudflare)
 - [ ] Speicherdauer der Server-Logs
 - [ ] „Stand“-Datum der Datenschutzerklärung (DE + EN)
 - [ ] Adresse des Commissioner for Personal Data Protection vor Launch verifizieren
@@ -41,5 +41,7 @@ Alle Werte werden in `src/content.ts` gepflegt. Erledigte Punkte abhaken.
 
 ## Technik / Launch
 - [ ] Finale Domain (für Canonical-, hreflang- und OG-URLs)
-- [ ] Deployment einrichten (Host muss `/pfad` auf `/pfad/index.html` abbilden, ohne SPA-Fallback auf `/index.html`)
+- [x] Deployment vorbereiten (Cloudflare Pages, 404.html, Pfade mit `/` am Ende, Domain in `site.url`)
+- [ ] Cloudflare Pages im Dashboard mit dem GitHub-Repo verbinden und Domain `homestoragepaphos.com` zuordnen
+- [ ] `www.homestoragepaphos.com` auf `homestoragepaphos.com` umleiten (Cloudflare Redirect Rule)
 - [ ] Open-Graph-Bild in `site.ogImage` eintragen (wird erst mit Domain ausgegeben)

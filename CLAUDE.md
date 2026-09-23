@@ -14,7 +14,9 @@ Zweisprachige Landing Page (DE/EN) für **Home Storage Paphos**, ein Self-Storag
   - einfacher, gut lesbarer Code, keine exotischen Tools oder Abstraktionen
   - kleine, klar benannte Komponenten
 - Prerendering/SSG über **vite-react-ssg**, damit fertiges HTML für Google entsteht (`npm run build` erzeugt statische Seiten für alle Routen).
-- Deployment wird später festgelegt – aktuell nicht einrichten. Hinweis: Der Host muss `/impressum` auf `/impressum/index.html` abbilden (kein SPA-Fallback auf die Startseite), sonst gibt es Hydration-Fehler. `vite preview` macht das nur mit Schrägstrich am Ende (`/impressum/`).
+- Deployment: **Cloudflare Pages** mit Git-Integration (jeder Push auf `main` geht live, andere Branches bekommen eine Vorschau-URL). Domain: `homestoragepaphos.com`. Einstellungen im Cloudflare-Dashboard: Build command `npm run build`, Output directory `dist`; Node-Version über `.node-version`. Keine Cloudflare-Extras mit Skripten/Cookies (Web Analytics, Bot-Challenges, Zaraz) einschalten.
+- Interne Pfade immer **mit Schrägstrich am Ende** (`/impressum/`), so wie Cloudflare sie ausliefert (`/impressum` wird dorthin umgeleitet). Pfade stehen in `src/lib/i18n.ts`.
+- `dist/404.html` muss existieren (wird beim Build aus der Route `/404` erzeugt), sonst behandelt Cloudflare die Seite als SPA und liefert für unbekannte Adressen die Startseite aus.
 - Links innerhalb der Seite als normale `<a href>` (keine SPA-Navigation nötig, jede Seite ist vorgerendert).
 - FAQ mit nativem `<details>` statt Accordion, damit die Antworten im vorgerenderten HTML stehen.
 
@@ -109,7 +111,7 @@ Zweisprachige Landing Page (DE/EN) für **Home Storage Paphos**, ein Self-Storag
 - Keine sonstigen externen Ressourcen (CDNs, Embeds) ohne Rücksprache.
 - Unternehmen: zypriotische Ltd mit VAT-Registrierung.
 - **Impressum / Legal Notice** nach zypriotischem Recht (E-Commerce-Gesetz 156(I)/2004, Companies Law): Firmenname, eingetragener Sitz, Registernummer (HE …), VAT-Nummer, Director(s), Telefon, E-Mail – alles TODO.
-- **Datenschutzerklärung** nach DSGVO und zypriotischem Gesetz 125(I)/2018: Verantwortlicher, Hosting (TODO, wird später festgelegt), Server-Logs, Google Maps (Einwilligung), Kontakt per E-Mail/Telefon/WhatsApp, Betroffenenrechte, Beschwerderecht beim Commissioner for Personal Data Protection (Zypern).
+- **Datenschutzerklärung** nach DSGVO und zypriotischem Gesetz 125(I)/2018: Verantwortlicher, Hosting (Cloudflare), Server-Logs, Google Maps (Einwilligung), Kontakt per E-Mail/Telefon/WhatsApp, Betroffenenrechte, Beschwerderecht beim Commissioner for Personal Data Protection (Zypern).
 - Rechtstexte sichtbar als **Entwurf** kennzeichnen (TODO: vor Launch rechtlich prüfen lassen).
 
 ## Qualität
