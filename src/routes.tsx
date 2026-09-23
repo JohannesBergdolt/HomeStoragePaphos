@@ -16,6 +16,7 @@ export const routes: RouteRecord[] = [
   { path: "/en/legal-notice", element: <ImprintPage lang="en" /> },
   { path: "/en/privacy", element: <PrivacyPage lang="en" /> },
 
-  // Unbekannte Adressen
+  // Fehlerseite: wird als 404.html gespeichert und vom Host bei unbekannten Adressen gezeigt
+  { path: "/404", element: <NotFound /> },
   { path: "*", element: <NotFound /> },
 ];

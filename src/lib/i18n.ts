@@ -2,10 +2,11 @@ import { contact, content, type Lang } from "@/content";
 
 // Welche Seite in welcher Sprache unter welcher Adresse liegt.
 // Der Sprachumschalter nutzt diese Tabelle, um auf der passenden Unterseite zu bleiben.
+// Immer mit "/" am Ende: So liefert der Host die Seiten ohne Umleitung aus.
 export const paths = {
-  home: { de: "/", en: "/en" },
-  imprint: { de: "/impressum", en: "/en/legal-notice" },
-  privacy: { de: "/datenschutz", en: "/en/privacy" },
+  home: { de: "/", en: "/en/" },
+  imprint: { de: "/impressum/", en: "/en/legal-notice/" },
+  privacy: { de: "/datenschutz/", en: "/en/privacy/" },
 } as const;
 
 export type PageKey = keyof typeof paths;

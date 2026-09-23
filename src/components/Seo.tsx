@@ -14,7 +14,7 @@ interface SeoProps {
 export function Seo({ lang, title, description, page }: SeoProps) {
   // Absolute URLs gibt es erst, wenn die Domain in content.ts eingetragen ist
   const hasDomain = !isTodo(site.url);
-  const url = (path: string) => site.url + (path === "/" ? "/" : path);
+  const url = (path: string) => site.url + path;
 
   return (
     <Head htmlAttributes={{ lang }}>
