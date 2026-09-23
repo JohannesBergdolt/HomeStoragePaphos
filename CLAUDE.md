@@ -14,7 +14,24 @@ Zweisprachige Landing Page (DE/EN) für **Home Storage Paphos**, ein Self-Storag
   - einfacher, gut lesbarer Code, keine exotischen Tools oder Abstraktionen
   - kleine, klar benannte Komponenten
 - Prerendering/SSG über **vite-react-ssg**, damit fertiges HTML für Google entsteht (`npm run build` erzeugt statische Seiten für alle Routen).
-- Deployment wird später festgelegt – aktuell nicht einrichten.
+- Deployment wird später festgelegt – aktuell nicht einrichten. Hinweis: Der Host muss `/impressum` auf `/impressum/index.html` abbilden (kein SPA-Fallback auf die Startseite), sonst gibt es Hydration-Fehler. `vite preview` macht das nur mit Schrägstrich am Ende (`/impressum/`).
+- Links innerhalb der Seite als normale `<a href>` (keine SPA-Navigation nötig, jede Seite ist vorgerendert).
+- FAQ mit nativem `<details>` statt Accordion, damit die Antworten im vorgerenderten HTML stehen.
+
+## Befehle
+
+- `npm run dev` – Entwicklungsserver (http://localhost:8080)
+- `npm run build` – statische Seiten nach `dist/` (je Route eine `index.html`)
+- `npm run lint` – TypeScript-Prüfung
+
+## Dateistruktur
+
+- `src/content.ts` – **alle** Inhalte (gemeinsame Daten oben, dann `de`, dann `en`; `en` ist gegen `de` typgeprüft)
+- `src/routes.tsx` – Routen; `src/lib/i18n.ts` – Pfad-Tabelle je Sprache (für den Sprachumschalter) und Links für Telefon/WhatsApp/E-Mail
+- `src/pages/` – Seiten; `src/components/sections/` – Abschnitte der Landing Page
+- `src/components/Seo.tsx` – lang, Title, Description, OG, hreflang; Canonical/hreflang erst, wenn `site.url` gesetzt ist
+- `src/components/MapConsent.tsx` – Google Maps per Klick
+- `src/components/ui/` – shadcn/ui-Komponenten
 
 ## Konventionen
 

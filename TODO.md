@@ -9,7 +9,7 @@ Alle Werte werden in `src/content.ts` gepflegt. Erledigte Punkte abhaken.
 
 ## Standort
 - [ ] Adresse des Geländes
-- [ ] Google-Maps-Embed-URL / Koordinaten
+- [ ] Google-Maps-Embed-URL auf genauen Standort ändern (`location.mapEmbedUrl`, zeigt aktuell nur „Paphos“)
 
 ## Angebot und Preise
 - [ ] Boxgrößen (Maße / m² / m³)
@@ -18,6 +18,7 @@ Alle Werte werden in `src/content.ts` gepflegt. Erledigte Punkte abhaken.
 - [ ] Rabatt-Prozentsatz bei 12 Monaten
 - [ ] Aufpreis für Zugang außerhalb der Öffnungszeiten (optional nennen?)
 - [ ] Verpackungsmaterial: Sortiment / Preise (optional)
+- [ ] FAQ „Was darf ich einlagern?“: Liste nicht erlaubter Gegenstände (DE + EN)
 - [ ] Bankverbindung für Überweisung (optional, eher nicht öffentlich)
 
 ## Firmendaten (Impressum / Legal Notice)
@@ -30,6 +31,8 @@ Alle Werte werden in `src/content.ts` gepflegt. Erledigte Punkte abhaken.
 ## Datenschutz
 - [ ] Hosting-Anbieter festlegen und in der Datenschutzerklärung eintragen
 - [ ] Speicherdauer der Server-Logs
+- [ ] „Stand“-Datum der Datenschutzerklärung (DE + EN)
+- [ ] Adresse des Commissioner for Personal Data Protection vor Launch verifizieren
 - [ ] Rechtstexte (Impressum, Datenschutz, DE + EN) vor Launch rechtlich prüfen lassen
 
 ## Medien
@@ -38,4 +41,5 @@ Alle Werte werden in `src/content.ts` gepflegt. Erledigte Punkte abhaken.
 
 ## Technik / Launch
 - [ ] Finale Domain (für Canonical-, hreflang- und OG-URLs)
-- [ ] Deployment einrichten
+- [ ] Deployment einrichten (Host muss `/pfad` auf `/pfad/index.html` abbilden, ohne SPA-Fallback auf `/index.html`)
+- [ ] Open-Graph-Bild in `site.ogImage` eintragen (wird erst mit Domain ausgegeben)

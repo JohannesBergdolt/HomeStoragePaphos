@@ -1,0 +1,13 @@
+# Home Storage Paphos
+
+Zweisprachige Landing Page (DE/EN) für Home Storage Paphos.
+
+- **Texte, Preise, Kontaktdaten ändern:** nur in `src/content.ts`
+- **Offene Punkte:** `TODO.md`
+- **Projektregeln:** `CLAUDE.md`
+
+```sh
+npm install
+npm run dev     # Entwicklung: http://localhost:8080
+npm run build   # statische Seiten in dist/
+```
