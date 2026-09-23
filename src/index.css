@@ -20,7 +20,7 @@
 
     --background: var(--offwhite);
     --foreground: var(--anthracite);
-    --border: 214 221 221; /* #D6DDDD */
+    --border: 196 206 206; /* #C4CECE – Rahmen von Karten und Trennlinien */
     --ring: var(--petrol);
 
     --primary: var(--petrol);

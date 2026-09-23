@@ -15,7 +15,7 @@ export function Offer({ lang }: { lang: Lang }) {
         <SectionHeading id={`${id}-title`} title={offer.title} intro={offer.intro} />
 
         {/* Boxen im Container */}
-        <div className="rounded-lg border border-border bg-white p-6 sm:p-8">
+        <div className="rounded-lg border-2 border-border bg-white p-6 sm:p-8">
           <div className="flex items-start gap-4">
             <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-md bg-petrol-light text-petrol">
               <Container className="size-5" aria-hidden="true" />
@@ -28,7 +28,7 @@ export function Offer({ lang }: { lang: Lang }) {
 
           <ul className="mt-8 grid gap-4 md:grid-cols-3">
             {boxes.map((box) => (
-              <li key={box.name.en} className="flex flex-col rounded-lg border border-border bg-offwhite p-5">
+              <li key={box.name.en} className="flex flex-col rounded-lg border-2 border-border bg-offwhite p-5">
                 <h4 className="font-semibold text-anthracite">{box.name[lang]}</h4>
                 <p className="mt-1 text-sm text-muted-foreground">
                   {offer.boxes.sizeLabel}: {box.size}
@@ -42,7 +42,7 @@ export function Offer({ lang }: { lang: Lang }) {
           <p className="mt-4 text-sm text-muted-foreground">{offer.boxes.vatNote}</p>
 
           {/* Rabatte */}
-          <div className="mt-8 rounded-lg bg-petrol-light p-5">
+          <div className="mt-8 rounded-lg border-2 border-petrol/20 bg-petrol-light p-5">
             <h4 className="flex items-center gap-2 font-semibold text-anthracite">
               <Percent className="size-4 text-petrol" aria-hidden="true" />
               {offer.discount.title}
@@ -59,7 +59,7 @@ export function Offer({ lang }: { lang: Lang }) {
 
         <div className="mt-6 grid gap-6 md:grid-cols-2">
           {/* Außenstellplätze */}
-          <div className="flex flex-col rounded-lg border border-border bg-white p-6 sm:p-8">
+          <div className="flex flex-col rounded-lg border-2 border-border bg-white p-6 sm:p-8">
             <span className="inline-flex size-11 items-center justify-center rounded-md bg-petrol-light text-petrol">
               <Car className="size-5" aria-hidden="true" />
             </span>
@@ -69,7 +69,7 @@ export function Offer({ lang }: { lang: Lang }) {
           </div>
 
           {/* Verpackungsmaterial */}
-          <div className="flex flex-col rounded-lg border border-border bg-white p-6 sm:p-8">
+          <div className="flex flex-col rounded-lg border-2 border-border bg-white p-6 sm:p-8">
             <span className="inline-flex size-11 items-center justify-center rounded-md bg-petrol-light text-petrol">
               <Package className="size-5" aria-hidden="true" />
             </span>

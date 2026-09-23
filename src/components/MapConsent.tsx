@@ -18,14 +18,14 @@ export function MapConsent({ lang }: { lang: Lang }) {
       <iframe
         src={location.mapEmbedUrl}
         title={text.iframeTitle}
-        className="aspect-[4/3] w-full rounded-lg border border-border sm:aspect-[16/9]"
+        className="aspect-[4/3] w-full rounded-lg border-2 border-border sm:aspect-[16/9]"
         loading="lazy"
       />
     );
   }
 
   return (
-    <div className="flex min-h-80 w-full flex-col items-center justify-center gap-4 rounded-lg border border-border bg-petrol-light p-6 text-center sm:aspect-[16/9]">
+    <div className="flex min-h-80 w-full flex-col items-center justify-center gap-4 rounded-lg border-2 border-border bg-petrol-light p-6 text-center sm:aspect-[16/9]">
       <MapPin className="size-10 text-petrol" aria-hidden="true" />
       <p className="max-w-md text-sm leading-relaxed text-anthracite">{text.notice}</p>
       <Button onClick={() => setLoaded(true)}>{text.button}</Button>

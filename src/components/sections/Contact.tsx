@@ -25,7 +25,7 @@ export function Contact({ lang }: { lang: Lang }) {
               <a
                 href={item.href}
                 {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                className="flex h-full items-center gap-4 rounded-lg border border-border bg-white p-5 transition-colors hover:border-petrol"
+                className="flex h-full items-center gap-4 rounded-lg border-2 border-border bg-white p-5 transition-colors hover:border-petrol"
               >
                 <span className="inline-flex size-11 shrink-0 items-center justify-center rounded-md bg-petrol text-white">
                   <item.icon className="size-5" aria-hidden="true" />

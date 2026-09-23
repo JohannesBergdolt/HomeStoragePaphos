@@ -54,9 +54,9 @@ export const contact = {
 
 export const location = {
   address: "TODO: Adresse des Geländes",
-  // Einbettungs-Link aus Google Maps ("Teilen" → "Karte einbetten" → Link aus src="...").
-  // TODO: auf den genauen Standort ändern – aktuell zeigt die Karte nur Paphos allgemein.
-  mapEmbedUrl: "https://www.google.com/maps?q=Paphos,+Cyprus&output=embed",
+  // Einbettungs-Link für Google Maps. Standort: 34.7462246, 32.4830988
+  // (aus https://maps.app.goo.gl/vTbqqfrT9X28GTxS6). z = Zoomstufe.
+  mapEmbedUrl: "https://www.google.com/maps?q=34.7462246,32.4830988&z=17&output=embed",
 };
 
 export const company = {

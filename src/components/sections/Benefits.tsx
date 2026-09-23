@@ -25,7 +25,7 @@ export function Benefits({ lang }: { lang: Lang }) {
           {text.benefits.items.map((item) => {
             const Icon = icons[item.icon] ?? ShieldCheck;
             return (
-              <li key={item.title} className="rounded-lg border border-border bg-offwhite p-6">
+              <li key={item.title} className="rounded-lg border-2 border-border bg-offwhite p-6">
                 <span className="inline-flex size-11 items-center justify-center rounded-md bg-petrol-light text-petrol">
                   <Icon className="size-5" aria-hidden="true" />
                 </span>

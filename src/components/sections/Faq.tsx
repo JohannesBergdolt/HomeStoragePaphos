@@ -14,7 +14,7 @@ export function Faq({ lang }: { lang: Lang }) {
       <div className="container max-w-3xl">
         <SectionHeading id={`${id}-title`} title={text.faq.title} />
 
-        <div className="divide-y divide-border rounded-lg border border-border bg-white">
+        <div className="divide-y divide-border rounded-lg border-2 border-border bg-white">
           {text.faq.items.map((item) => (
             <details key={item.question} className="group">
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-5 font-semibold text-anthracite [&::-webkit-details-marker]:hidden">

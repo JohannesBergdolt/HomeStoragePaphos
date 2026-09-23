@@ -11,7 +11,7 @@ export default function ImprintPage({ lang }: { lang: Lang }) {
     <Layout lang={lang} page="imprint">
       <Seo lang={lang} page="imprint" title={text.meta.imprint.title} description={text.meta.imprint.description} />
       <LegalPage lang={lang} title={text.imprint.title} intro={text.imprint.intro}>
-        <dl className="divide-y divide-border rounded-lg border border-border bg-white">
+        <dl className="divide-y divide-border rounded-lg border-2 border-border bg-white">
           {text.imprint.fields.map((field) => (
             <div key={field.label} className="grid gap-1 p-4 sm:grid-cols-3 sm:gap-4">
               <dt className="font-semibold text-anthracite">{field.label}</dt>

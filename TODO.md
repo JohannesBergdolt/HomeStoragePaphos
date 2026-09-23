@@ -9,7 +9,7 @@ Alle Werte werden in `src/content.ts` gepflegt. Erledigte Punkte abhaken.
 
 ## Standort
 - [ ] Adresse des Geländes
-- [ ] Google-Maps-Embed-URL auf genauen Standort ändern (`location.mapEmbedUrl`, zeigt aktuell nur „Paphos“)
+- [x] Google-Maps-Standort eintragen (`location.mapEmbedUrl`)
 
 ## Angebot und Preise
 - [ ] Boxgrößen (Maße / m² / m³)
